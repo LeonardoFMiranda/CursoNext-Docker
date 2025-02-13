@@ -45,6 +45,7 @@ async function getPostBySlug(slug) {
 
         post.markdown = contentHtml
 
+        return post
 
     } catch (error) {
         logger.error('Falha ao obter posts', { slug,error })
