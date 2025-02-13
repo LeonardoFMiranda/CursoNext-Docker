@@ -48,8 +48,9 @@ async function getPostBySlug(slug) {
 
     } catch (error) {
         logger.error('Falha ao obter posts', { slug,error })
+        redirect('/not-found')
     }
-    redirect('/not-found')
+    
 }
 
 const PagePost = async ({ params }) => {
